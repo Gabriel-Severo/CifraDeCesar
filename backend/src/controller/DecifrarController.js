@@ -1,20 +1,20 @@
 function handleDecifrar(msg, key){
-    let cifrado = ''
+    let decifrado = ''
     for (letter of msg){
         let letterAscii = letter.charCodeAt(0)
         if (letterAscii >= 97 && letterAscii <= 122){
             letterAscii -= key
             if (letterAscii < 97){
                 letterAscii = 122 - (96 - letterAscii)
-                cifrado += String.charCodeAt(letterAscii)
+                decifrado += String.charCodeAt(letterAscii)
             }else{
-                cifrado += String.fromCharCode(letterAscii)
+                decifrado += String.fromCharCode(letterAscii)
             }
         }else{
-            cifrado += letter
+            decifrado += letter
         }
     }
-    return cifrado
+    return decifrado
 }
 module.exports = {
     async index(req, res){
