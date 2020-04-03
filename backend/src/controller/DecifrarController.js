@@ -6,7 +6,7 @@ function handleDecifrar(msg, key){
             letterAscii -= key
             if (letterAscii < 97){
                 letterAscii = 122 - (96 - letterAscii)
-                decifrado += String.charCodeAt(letterAscii)
+                decifrado += String.fromCharCode(letterAscii)
             }else{
                 decifrado += String.fromCharCode(letterAscii)
             }
