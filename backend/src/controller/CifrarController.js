@@ -5,7 +5,8 @@ function handleCifrar(msg, key){
         if (letterAscii >= 97 && letterAscii <= 122){
             letterAscii += parseInt(key)
             if (letterAscii > 122){
-                letterAscii = 96 + (122 - letterAscii)
+                console.log(letterAscii)
+                letterAscii = 96 + (letterAscii - 122)
                 cifrado += String.fromCharCode(letterAscii)
             }else{
                 cifrado += String.fromCharCode(letterAscii)

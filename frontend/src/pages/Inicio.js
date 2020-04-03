@@ -12,8 +12,12 @@ export default function Inicio(){
         })
         setResult(response.data.response)
     }
-    function handleCifrar(){
-        console.log('Cifrar')
+    async function handleCifrar(){
+        const response = await api.post('/cifrar', {
+            message: message,
+            key: key
+        })
+        setResult(response.data.response)
     }
     return (
         <div className="container">
